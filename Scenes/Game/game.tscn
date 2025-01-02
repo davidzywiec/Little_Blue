@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cms3ym2rcwpoc"]
+
+[ext_resource type="PackedScene" uid="uid://b3g74rypo0sg3" path="res://Scenes/Player/player.tscn" id="1_bq41d"]
+[ext_resource type="Texture2D" uid="uid://ddxxaq2cintcu" path="res://Assets/Background/Background.png" id="1_q4dpf"]
+[ext_resource type="PackedScene" uid="uid://c4gwvii2nxojh" path="res://Scenes/Game/coin.tscn" id="3_sc54o"]
+
+[node name="Game" type="Node2D"]
+z_index = -2
+
+[node name="Background" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture = ExtResource("1_q4dpf")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("1_bq41d")]
+position = Vector2(18, 288)
+
+[node name="coin" parent="." instance=ExtResource("3_sc54o")]
+position = Vector2(289, 200)
+frame_progress = 0.0

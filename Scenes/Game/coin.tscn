@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4gwvii2nxojh"]
+
+[ext_resource type="Texture2D" uid="uid://cgq10ld07aig6" path="res://Assets/Coin/coin.png" id="1_7p2ln"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8u43"]
+atlas = ExtResource("1_7p2ln")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n63hl"]
+atlas = ExtResource("1_7p2ln")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jijs"]
+atlas = ExtResource("1_7p2ln")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1542"]
+atlas = ExtResource("1_7p2ln")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2yhw7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8u43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n63hl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jijs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w1542")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="coin" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_2yhw7")
+autoplay = "default"
+frame_progress = 0.732489
