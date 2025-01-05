@@ -1,8 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3g74rypo0sg3"]
+[gd_scene load_steps=4 format=3 uid="uid://b3g74rypo0sg3"]
 
 [ext_resource type="Texture2D" uid="uid://cpowel0hbmmgp" path="res://Assets/Character/Little_Blue.png" id="1_go6yc"]
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_xqkfx"]
 
-[node name="Player" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4xodl"]
+radius = 13.0
+
+[node name="Player" type="StaticBody2D"]
+script = ExtResource("1_xqkfx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_go6yc")
+
+[node name="BoostTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4xodl")
