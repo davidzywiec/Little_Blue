@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvcrhklros6uo"]
+
+[ext_resource type="Script" path="res://Scenes/Spawn Manager/spawn_manager.gd" id="1_tqh7l"]
+
+[node name="SpawnManager" type="Node2D"]
+script = ExtResource("1_tqh7l")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Coins" type="Marker2D" parent="."]

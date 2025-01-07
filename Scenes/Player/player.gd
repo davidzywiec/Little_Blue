@@ -13,6 +13,8 @@ var boost_charges : int = 1
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	boost_timer.timeout.connect(apply_boost.bind(false))
+	SignalManager.game_over.connect(game_over)
+	SignalManager.new_game.connect(new_game)
 
 func _process(delta):
 	#Check on boost
@@ -44,3 +46,10 @@ func apply_boost(enable: bool):
 		boost_speed = GameManager.BOOST
 	else:
 		boost_speed = 0
+
+##Stop physics on game over
+func game_over()->void:
+	set_physics_process(false)
+
+func new_game()->void:
+	boost_charges = 1

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Little_Blue"
-run/main_scene="res://Scenes/Game/game.tscn"
+run/main_scene="res://Scenes/Main Menu/Main_Menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
@@ -20,11 +20,13 @@ config/icon="res://icon.svg"
 GameManager="*res://Singletons/game_manager.gd"
 SignalManager="*res://Singletons/signal_manager.gd"
 ScoreManager="*res://Singletons/score_manager.gd"
+SceneManager="*res://Singletons/scene_manager.gd"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/mode=2
 window/stretch/mode="viewport"
 
 [input]
